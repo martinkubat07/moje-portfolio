@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pokyn pro neindexování ve vyhledávačích podle pokynů -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Martin Kubát - Osobní Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: background-color 0.3s, color 0.3s; }
+    .hero { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 60px 0; }
+    .motto { font-style: italic; font-size: 1.1rem; opacity: 0.9; }
+    .badge-skill { font-size: 0.95rem; margin: 3px; }
+    
+    /* Tmavý režim (Interaktivní funkce) */
+    .dark-mode { background-color: #121212; color: #e0e0e0; }
+    .dark-mode .card { background-color: #1e1e1e; color: #ffffff; border-color: #333; }
+    .dark-mode .list-group-item { background-color: #1e1e1e; color: #ffffff; border-color: #333; }
+    .dark-mode footer { border-top-color: #333 !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Úvodní představení (Hero sekce) -->
+  <header class="hero text-center mb-4 shadow">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Martin Kubát</h1>
+      <p class="fs-5 mb-2">Student SPŠ, SOŠ a SOU Hradební</p>
+      <p class="badge bg-warning text-dark fs-6">Obor: Elektrotechnika – Automatizace</p>
+      
+      <div class="mt-3 motto">
+        „Stres zabíjí, tak nač se stresovat z věcí, které neovlivním.“
+      </div>
+
+      <button id="themeToggle" class="btn btn-outline-light btn-sm mt-4">Přepnout tmavý / světlý režim 🌙</button>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- O mně a Úspěchy -->
+    <section class="mb-5">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h4 text-primary">O mně</h3>
+              <p class="card-text">
+                Jsem studentem elektrotechniky se zaměřením na automatizaci. Baví mě propojení manuální zručnosti s technikou, tvorbou modelů a moderními technologiemi.
+              </p>
+              <h4 class="h6 fw-bold mt-3">Na co jsem hrdý:</h4>
+              <ul>
+                <li>Svoje propracované modely z kartonu.</li>
+                <li>Udržování relativně dobrých známek ve škole.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zájmy a Schopnosti -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title h4 text-primary">Zájmy a dovednosti</h3>
+              <div class="d-flex flex-wrap gap-2 my-3">
+                <span class="badge bg-primary badge-skill">🖨️ 3D tisk</span>
+                <span class="badge bg-primary badge-skill">✂️ Lepení papírových modelů</span>
+                <span class="badge bg-primary badge-skill">🚴 Jízda na kole</span>
+                <span class="badge bg-primary badge-skill">🎮 Hraní PC her</span>
+                <span class="badge bg-primary badge-skill">🚗 Řízení auta</span>
+              </div>
+              <p class="card-text text-muted small mt-3">
+                Ve volném čase kombinuji kreativní tvorbu modelů s aktivním odpočinkem a technikou.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekty -->
+    <section class="mb-5">
+      <h2 class="h3 mb-3 border-bottom pb-2">Moje projekty</h2>
+      <div class="row g-4">
+        
+        <div class="col-12">
+          <div class="card h-100 shadow-sm border-start border-primary border-4">
+            <div class="card-body">
+              <h4 class="card-title h5">Aktuální projekt: 3D tištěný kryt na tónový generátor</h4>
+              <p class="card-text">
+                Projekt tónového generátoru pájeného v rámci školních praxí. Navrhnul a vytisknul jsem pro něj vlastní ochranný 3D kryt ve stylu piana.
+              </p>
+              <span class="badge bg-info text-dark">3D Tisk & Pájení</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Budoucnost -->
+    <section class="mb-5">
+      <div class="card p-4 shadow-sm bg-light-subtle">
+        <h3 class="h4 text-primary">Moje budoucnost</h3>
+        <p class="mb-0">
+          Do budoucna bych chtěl zkusit studium na <strong>vysoké škole</strong>. V případě, že by to nevyšlo, plánuji jít přímo do praxe a pracovat v oboru elektrotechniky a automatizace.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interaktivní ukazatel / Počítadlo -->
+    <section class="mb-5">
+      <div class="card p-4 shadow-sm text-center">
+        <h3 class="h5">Interaktivní ukázka</h3>
+        <p class="small text-muted">Jednoduchá reakční/interaktivní funkce v JavaScriptu pro prezentaci:</p>
+        <div>
+          <button id="counterBtn" class="btn btn-outline-primary">Počet kliknutí: <span id="count" class="fw-bold">0</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="mb-5 text-center">
+      <h3 class="h4">Kontakt</h3>
+      <p>Máš dotaz nebo zájem o spolupráci? Napiš mi na:</p>
+      <a href="mailto:martinkubat07@gmail.com" class="btn btn-primary">martinkubat07@gmail.com</a>
+    </section>
+
+  </div>
+
+  <footer class="text-center py-4 border-top mt-5 text-muted small">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Martin Kubát | SPŠ, SOŠ a SOU Hradební</p>
+    </div>
+  </footer>
+
+  <script>
+    // Interaktivní funkce 1: Počítadlo kliknutí
+    let count = 0;
+    const countSpan = document.getElementById('count');
+    document.getElementById('counterBtn').addEventListener('click', () => {
+      count++;
+      countSpan.textContent = count;
+    });
+
+    // Interaktivní funkce 2: Tmavý režim
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
